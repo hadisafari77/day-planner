@@ -14,7 +14,12 @@ $(".saveBtn").on("click", function () {
 $("#9 .inputValue").val(localStorage.getItem("9"))
 $("#10 .textValue").val(localStorage.getItem("10"))
 $("#11 .textValue").val(localStorage.getItem("11"))
-$("#11 .textValue").val(localStorage.getItem("11"))
+$("#12 .textValue").val(localStorage.getItem("12"))
+$("#13 .textValue").val(localStorage.getItem("13"))
+$("#14 .textValue").val(localStorage.getItem("14"))
+$("#15 .textValue").val(localStorage.getItem("15"))
+$("#16 .textValue").val(localStorage.getItem("16"))
+$("#17 .textValue").val(localStorage.getItem("17"))
 
 
 const cssUpdate = () => {
