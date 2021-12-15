@@ -1,6 +1,5 @@
 
-document.getElementById("currentDay").innerText = moment().format('MMMM Do YYYY, h:mm:ss a');
-
+$("#currentDay").text(moment().format("dddd, MMMM, Do"))
 var currentTime = moment().hours()
 
 
