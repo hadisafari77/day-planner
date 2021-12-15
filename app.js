@@ -13,7 +13,8 @@ $(".saveBtn").on("click", function () {
 })
 
 $("#9 .inputValue").val(localStorage.getItem("9"))
-
+$("#10 .textValue").val(localStorage.getItem("10"))
+$("#11 .textValue").val(localStorage.getItem("11"))
 
 const cssUpdate = () => {
   currentTime = moment().hours()
