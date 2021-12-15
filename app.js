@@ -4,16 +4,31 @@ document.getElementById("currentDay").innerText = moment().format('MMMM Do YYYY,
 var currentTime = moment().hours()
 
 
-document.getElementById("btn").addEventListener("click", function (event) {
+$(".saveBtn").on("click", function () {
+  var textValue = $(this).siblings(".inputValue").val()
 
-  var inputValue = document.getElementById(event.target.classList[0]).value
+  var divKey = $(this).parent().attr("id")
 
-  console.log(inputValue)
-
-  var divKey = localStorage.setItem(divKey, inputValue)
+  localStorage.setItem(divKey, textValue)
 })
 
+$("#9 .inputValue").val(localStorage.getItem("9"))
 
 
+const cssUpdate = () => {
+  currentTime = moment().hours()
+  $(".timeBlock").each(function () {
+    var divId = $(this).attr("id")
 
+    if (currentTime == divId) {
+      $(this).addClass("present")
+    } else if (currentTime < divId) {
+      $(this).addClass("future")
+    } else {
+      $(this).addClass("past")
+    }
 
+  })
+}
+
+cssUpdate()
